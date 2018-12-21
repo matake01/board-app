@@ -2,11 +2,11 @@
 FROM python:3.6
 
 # arbitrary location choice: you can change the directory
-RUN mkdir -p /opt/services/app/src
-WORKDIR /opt/services/app/src
+RUN mkdir -p /opt/services/dist
+WORKDIR /opt/services/dist
 
 # copy our project code
-COPY . /opt/services/app/src
+COPY . /opt/services/dist
 
 # install our two dependencies
 RUN pip install -r requirements.txt
